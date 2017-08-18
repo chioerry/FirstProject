@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Insert Dash</title>
+</head>
+<body>
+	<label>Enter any number: <input type="text" id="txt" /></label>
+	<button type="button" value="submit" onclick="insertdash()">Check</button>
+	<p id="demo">The Answer will be here</p>
+	<script type="text/javascript">
+		function insertdash(){
+			var input1=document.getElementById("txt").value;
+			var digits=(""+input1).split("");
+			var len = digits.length;
+			var ans="";
+			for (var i = 0; i< len; i++) {
+				if (digits[i]%2 == 0 && digits[i+1]%2==0) {
+					ans+=digits[i]+"-";
+				}
+				else
+				{
+					ans+=digits[i];
+				}
+			}
+			document.getElementById("demo").innerHTML = ans;
+		}
+		
+	</script>
+</body>
+</html>

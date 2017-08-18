@@ -5,24 +5,39 @@ var library = [
 { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
 { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
 ];
+var len = library.length;
 
-function titlesort(z){
+function valuesort(x,y){
 
-			return z.sort();
-		}
 
-for (let [key, value] of library) {
 	
-	if (key == "title") 
-	{
-		
-		titlesort(value);
-
-	}
+		if (x.title<y.title) 
+		{		
+			return -1;
+		}
+		else if (x.title>y.title) 
+		{		
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+	
 }
 
-for(let i in library)
-{
-	console.log(i);
-}
+var z = library.sort(valuesort);
 
+console.log(z);
+
+
+/*
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
+http://speakingjs.com/es5/ch22.html
+
+https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Set
+
+*/

@@ -1,12 +1,12 @@
-var myObj = [5, [22], [[14]], [[4]],[5,6]];
-var temp = myObj.toString().split(",");
-var maps = temp.map(function(i){
-	return parseInt(i);
-});
-console.log(maps);
+//Print a array without any objects in between
 
-/*
-	https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from
-http://www.tutorialspoint.com/javascript/javascript_arrays_object.htm
-http://javascript.info/tutorial/array
-*/
+var myObj = [5, [22], [[14]], [[4]],[5,6]];
+//var temp = myObj.toString().split(",");
+var temp = Array.from(myObj);
+var maps = temp.map(i => parseInt(i));
+
+//var maps = temp.map(function(i){
+//	return parseInt(i);
+//});
+
+console.log(maps);

@@ -1,4 +1,4 @@
-{
+var myjson = {
 "status": "ok",
 "source": "the-next-web",
 "sortBy": "latest",
@@ -51,4 +51,20 @@
 "urlToImage": "https://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/11/disney.gif",
 "publishedAt": "2016-11-29T16:00:56Z"
 }]
-}
+};
+
+var temp = myjson.articles;
+
+//console.log(temp);
+
+var ans ={};
+
+var nex = [];
+
+nex =temp.map(function(x){
+	ans = {"author":x.author,"title":x.title,"description":x.description};
+	return ans;
+});
+
+
+console.log(nex);
